@@ -1,0 +1,12 @@
+# Keep credentials out of version control
+.env
+.browser-profile/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Output
+doordash_orders.csv
