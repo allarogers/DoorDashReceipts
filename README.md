@@ -1,6 +1,7 @@
 # The story behind this project
-I found an unpleasant surprise a few weeks after moving into my new house: the pipe behind my stove had a huge crack and the leak has been going on for years undetected.  Needless to say, mold started growing behind the drywall and had to tear it all out to dry it out properly.
-Long story short: my family lived mostly off DoorDash for a few months.  Lucky for us, our wonderful home insurance covered the expenses, but that also meant hours of tedious expense reporting for me.
+I found an unpleasant surprise a few weeks after moving into my new house: the pipe behind my stove had a huge crack and the leak has been going on for years undetected.  Mold started growing behind the drywall; a water damage restoration company had to tear it all out to dry it out properly.
+
+Long story short: my family lived mostly off DoorDash for several months.  Lucky for us, our wonderful home insurance covered the expenses, but that also meant hours of tedious expense reporting for me.
 
 # Problem Statement
 DoorDash does not have a bulk receipt export for expense reports.  Manual work is time consuming and error prone.
