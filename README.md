@@ -1,12 +1,18 @@
-# DoorDash Receipts
+# The story behind this project
+I found an unpleasant surprise a few weeks after moving into my new house: the pipe behind my stove had a huge crack and the leak has been going on for years undetected.  Needless to say, mold started growing behind the drywall and had to tear it all out to dry it out properly.
+Long story short: my family lived mostly off DoorDash for a few months.  Lucky for us, our wonderful home insurance covered the expenses, but that also meant hours of tedious expense reporting for me.
 
-Python app that uses **Selenium** + **Chrome** to log into DoorDash, walk your order history in a configurable date range, and for each in-range order:
+# Problem Statement
+DoorDash does not have a bulk receipt export for expense reports.  Manual work is time consuming and error prone.
+
+# Solution
+DoorDash Receipt scraper is a python application that uses **Selenium** + **Chrome** to log into DoorDash, walk your order history in a configurable date range, and for each in-range order:
 
 1. **Adds a row to a CSV** — date, meal (breakfast / lunch / dinner from order time), vendor, total charge, order time (from the receipt when available)
 2. **Saves a screenshot** of the receipt (`[date]_[total].png`)
 3. **Saves a PDF** of the receipt via Chrome DevTools **Print to PDF** (same idea as Print → Save as PDF), as `[date]_[total].pdf`
 
-DoorDash only loads **~10 orders** at a time in the list; the scraper **scrolls in steps** as it goes (after each receipt it returns to `/orders/`, so it re-applies scroll depth so deeper orders stay reachable). See `scraper.py` (around the `need_rounds = min(pos // 10, …)` logic).
+> Note: DoorDash only loads **~10 orders** at a time in the list; the scraper **scrolls in steps** as it goes (after each receipt it returns to `/orders/`, so it re-applies scroll depth so deeper orders stay reachable). See `scraper.py` (around the `need_rounds = min(pos // 10, …)` logic).
 ---
 
 ## Before You Begin: Gather Your Paths
